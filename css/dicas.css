@@ -48,10 +48,12 @@ header {
     background-color: transparent;
     border-radius: 50%;
     width: 130%;
+    height: 160%;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     display: flex;
+    position: relative;
 }
 
 #back img {
@@ -68,9 +70,9 @@ nav {
     justify-content: space-between;
     background-color: #87ceeb; 
     color: black;
-    padding: 10px 20px;
-    border-bottom-left-radius: 90%;
-    border-bottom-right-radius: 90%;
+    padding: 30px 20px;
+    border-bottom-left-radius: 150%;
+    border-bottom-right-radius: 150%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     box-sizing: border-box;
