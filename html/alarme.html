@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/alarme.css">
-    <script src="../js/alarme.js"></script>
-    
+    <script src="../js/alarme.js" defer></script>
     <title>Alarme</title>
 </head>
 <body>
-    <nav>
-        <div id="logo">
-          <h1>DICAS</h1>
-        </div>
-        <div id="back">
-          <a href="./menu.html">
-            <button><img src="../img/voltar.png" alt="voltar"></button>
-          </a>
-        </div>
-      </nav>
-
-    <div class="container">
-        <div class="alarm--container">
-            <h1>00:00:00 PM</h1>
-            <div class="content">
-                <div class="alarm-controls">
-                    <select>
-                        <option value="hora">Horas</option>
-                    </select>
-                </div>
-
-                    <div class="alarm-controls">
-                        <select>
-                            <option value="minuto">Minutos</option>
-                        </select>
-                    </div>
+    <header>
+        <nav>
+            <div id="logo">
+                <h1>ALARME</h1>
             </div>
-            <button>Ativar</button>
+            <div id="back">
+                <a href="./menu.html" aria-label="Voltar para o menu">
+                    <button aria-label="Botão de voltar">
+                        <img src="../img/voltar.png" alt="Ícone de voltar">
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <body>
+    
+        <div class="title"><h2>Relógio com Despertador</h2></div>
+    
+        
+        <div class="clock" id="clock">00:00:00</div>
+
+        <div class="container">
+
+            <div>
+                <label for="alarm">Defina o horário do alarme:</label>
+                <input type="time" id="alarm">
+                <label for="remedy" id="nameRemedy">nome do medicamento:</label>
+                <input type="text" id="remedy">
+                <button onclick="setAlarm()">Definir Alarme</button>
+                <button onclick="cancelAlarm()">Cancelar Alarme</button>
+            </div>
+        
+            <div id="message" class="message"></div>
+        
         </div>
-    </div>
-</body>
-</html>
+        
+    </body>
+    </html>
