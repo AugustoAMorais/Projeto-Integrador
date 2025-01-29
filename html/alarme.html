@@ -32,12 +32,12 @@
         <div class="container">
 
             <div>
-                <label for="alarm">Defina o horário do alarme:</label>
+                <label for="alarm" id="lblAlarm">Defina o horário do alarme:</label>
                 <input type="time" id="alarm">
-                <label for="remedy" id="nameRemedy">nome do medicamento:</label>
+                <label for="remedy" id="lblRemedy">nome do medicamento:</label>
                 <input type="text" id="remedy">
-                <button onclick="setAlarm()">Definir Alarme</button>
-                <button onclick="cancelAlarm()">Cancelar Alarme</button>
+                <button onclick="setAlarm()" id="setAlarm">Definir Alarme</button>
+                <button onclick="cancelAlarm()" id="cancel">Cancelar Alarme</button>
             </div>
         
             <div id="message" class="message"></div>

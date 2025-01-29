@@ -16,7 +16,7 @@
             if (alarmTime && alarmTime === `${hours}:${minutes}`) {
                 // Se for o horário do alarme, toca o som e exibe a mensagem de alerta
                 const alarmSound = document.getElementById('alarmSound');
-                alarmSound.play(); // Toca o som do alarme
+                alarmSound.play("iphone_alarm.mp3"); // Toca o som do alarme
                 const message = document.getElementById('message');
                 message.textContent = "⏰ ALERTA! Hora de tomar o medicamento"; // Mensagem de alerta
                 message.classList.add("alarm-active"); // Aplica a classe CSS para ativar o estilo do alerta

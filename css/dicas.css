@@ -15,20 +15,26 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #87ceeb; /* Cor azul do cabeçalho */
+    justify-content: center;
+    background-color: #87ceeb;
     color: black;
-    padding: 10px;
-    border-bottom-left-radius: 50%; /* Curvatura no rodapé do header */
-    border-bottom-right-radius: 50%;
-    border-radius: 100%;
+    padding: 30px 20px;
+    border-bottom-left-radius: 150%;
+    border-bottom-right-radius: 150%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin-left: -50%;
 }
 
 #logo {
     flex: 1;
+    margin-left: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:14px;
 }
 
 #logo h1 {
@@ -38,17 +44,19 @@ header {
 }
 
 #back {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     position: absolute;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #back button {
     background-color: transparent;
     border-radius: 50%;
-    width: 130%;
-    height: 160%;
+    width: 35px;
+    height: 30px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -58,9 +66,13 @@ header {
 
 #back img {
     width: 50%;
-    height: 24%;
+    height: auto;
     display: block;
-    margin-top: 16%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Estilo para o nav (similar ao cabeçalho "DICAS") */
