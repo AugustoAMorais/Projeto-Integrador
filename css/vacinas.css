@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #87ceeb;
+    color: black;
+    padding: 30px 20px;
+    border-bottom-left-radius: 150%;
+    border-bottom-right-radius: 150%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin-left: -50%;
+    padding: 9%;
+}
+
+#logo {
+    flex: 1;
+    margin-left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:14px;
+}
+
+#logo h1 {
+    font-size: 200%;
+    font-weight: bold;
+    margin: 0;
+}
+
+#back {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#back button {
+    background-color: transparent;
+    border-radius: 50%;
+    width: 35px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+#back img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+nav button {
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+}
+
+.containerPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #87ceeb;
+    width: 100%;
+    max-width: 400px;
+    padding: 39%;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: -10%;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 400px;
+        padding: 20px;
+    }
+}
