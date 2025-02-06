@@ -1,22 +1,12 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f1f5f9;
+    text-align: center;
 }
 
+/* Título principal */
 nav {
     display: flex;
     align-items: center;
@@ -30,17 +20,15 @@ nav {
     width: 100%;
     position: fixed;
     top: 0;
-    margin-left: -50%;
-    padding: 9%;
 }
 
+/* Logo */
 #logo {
     flex: 1;
-    margin-left: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:14px;
+    font-size: 14px;
 }
 
 #logo h1 {
@@ -49,13 +37,13 @@ nav {
     margin: 0;
 }
 
+/* Botão de voltar */
 #back {
     position: absolute;
     left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 #back button {
@@ -67,8 +55,6 @@ nav {
     align-items: center;
     cursor: pointer;
     display: flex;
-    position: relative;
-    cursor: pointer;
 }
 
 #back img {
@@ -83,30 +69,69 @@ nav {
     cursor: pointer;
 }
 
-nav button {
-    background-color: transparent;
-    display: flex;
-    cursor: pointer;
-}
-
-.containerPrincipal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #87ceeb;
-    width: 100%;
+/* Container geral */
+.main-container {
     max-width: 400px;
-    padding: 39%;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: -10%;
+    margin: auto;
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 400px;
-        padding: 20px;
-    }
+/* Formulário de cadastro */
+.containerCadastro {
+    background-color: #b3e5fc;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    width: 51.5%; 
+    margin: 0 auto; 
+    margin-top: 4%;
+}
+
+.containerVacina {
+    background-color: #b3e5fc; 
+    padding: 18%; 
+    width: 20%; 
+    margin: 0 auto 20px auto; 
+    border-radius: 15px;
+    text-align: left;
+    margin-top: 13%;
+}
+
+.containerCadastro h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.containerCadastro label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.containerCadastro input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.containerCadastro button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0288d1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.containerCadastro button:hover {
+    background-color: #0277bd;
 }

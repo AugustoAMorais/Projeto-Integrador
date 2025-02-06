@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/vacinas.css">
     <script src="../js/vacinas.js"></script>
+
+
+    <title>Cadastro de Vacinas</title>
     
-    <title>Medkit</title>
 </head>
 <body>
-
     <header>
         <nav>
             <div id="logo">
@@ -24,22 +27,18 @@
         </nav>
     </header>
 
-    <section>
-        <div class="containerPrincipal">
+    <div class="containerVacina">
 
+    </div>
 
-
-        </div>
-
-        <div class="containerCadastro">
-            <h3>CADASTRO DE VACINAS</h3>
-
-            <label for="text" id="lblVacina">Nome da vacina</label>
-            <input type="text" id="vacina">
-            <label for="text">Data de vencimento</label>
-            <input type="date">
-        </div>
-    </section>
-
+    <!-- Formulário de cadastro -->
+    <div class="containerCadastro">
+        <h3>CADASTRO DE VACINAS</h3>
+        <label for="vacina">Nome da Vacina</label>
+        <input type="text" id="vacina" placeholder="Digite o nome da vacina">
+        <label for="vacinacao">Data da Vacinação</label>
+        <input type="date" id="vacinacao">
+        <button id="confirmar">CONFIRMAR</button>
+    </div>
 </body>
 </html>
