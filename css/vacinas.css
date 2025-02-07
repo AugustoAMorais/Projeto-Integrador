@@ -1,137 +1,147 @@
+/* Estilo geral do corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f1f5f9;
-    text-align: center;
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #f1f5f9; /* Define uma cor de fundo suave */
+    text-align: center; /* Centraliza o conteúdo */
 }
 
-/* Título principal */
+/* Estiliza a barra de navegação */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #87ceeb;
-    color: black;
-    padding: 30px 20px;
-    border-bottom-left-radius: 150%;
-    border-bottom-right-radius: 150%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: fixed;
-    top: 0;
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens */
+    background-color: #87ceeb; /* Cor de fundo azul claro */
+    color: black; /* Define a cor do texto */
+    padding: 30px 20px; /* Define o espaçamento interno */
+    border-bottom-left-radius: 150%; /* Arredonda a borda inferior esquerda */
+    border-bottom-right-radius: 150%; /* Arredonda a borda inferior direita */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    width: 100%; /* Define a largura total */
+    position: fixed; /* Mantém fixo no topo da página */
+    top: 0; /* Posiciona no topo */
 }
 
-/* Logo */
+/* Estiliza o logotipo */
 #logo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
+    flex: 1; /* Ocupa o espaço disponível */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    font-size: 14px; /* Define o tamanho da fonte */
 }
 
+/* Estiliza o título dentro do logotipo */
 #logo h1 {
-    font-size: 200%;
-    font-weight: bold;
-    margin: 0;
+    font-size: 200%; /* Define o tamanho da fonte do título */
+    font-weight: bold; /* Define o texto como negrito */
+    margin: 0; /* Remove as margens padrão */
 }
 
-/* Botão de voltar */
+/* Estiliza o botão de voltar */
 #back {
-    position: absolute;
-    left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute; /* Posicionamento absoluto */
+    left: 20px; /* Define um deslocamento para a esquerda */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
+/* Estiliza o botão de voltar */
 #back button {
-    background-color: transparent;
-    border-radius: 50%;
-    width: 35px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    display: flex;
+    background-color: transparent; /* Remove a cor de fundo */
+    border-radius: 50%; /* Torna o botão circular */
+    width: 35px; /* Define a largura */
+    height: 30px; /* Define a altura */
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    display: flex; /* Usa flexbox */
 }
 
+/* Estiliza a imagem dentro do botão de voltar */
 #back img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+    width: 50%; /* Define o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem não tenha espaçamentos extras */
+    margin: 0; /* Remove margens */
+    position: absolute; /* Posiciona no centro do botão */
+    top: 50%; /* Move para 50% da altura */
+    left: 50%; /* Move para 50% da largura */
+    transform: translate(-50%, -50%); /* Centraliza corretamente */
+    cursor: pointer; /* Define cursor interativo */
 }
 
-/* Container geral */
+/* Estiliza o container principal */
 .main-container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background-color: #e3f2fd;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Define a largura máxima */
+    margin: auto; /* Centraliza horizontalmente */
+    padding: 20px; /* Define o espaçamento interno */
+    background-color: #e3f2fd; /* Define cor de fundo */
+    border-radius: 10px; /* Arredonda os cantos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
-/* Formulário de cadastro */
+/* Estiliza o formulário de cadastro */
 .containerCadastro {
-    background-color: #b3e5fc;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: left;
-    width: 51.5%; 
-    margin: 0 auto; 
-    margin-top: 4%;
+    background-color: #b3e5fc; /* Define cor de fundo azul claro */
+    padding: 20px; /* Define espaçamento interno */
+    border-radius: 15px; /* Arredonda os cantos */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 51.5%; /* Define a largura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: 4%; /* Define margem superior */
 }
 
+/* Estiliza o container de vacina */
 .containerVacina {
-    background-color: #b3e5fc; 
-    padding: 18%; 
-    width: 20%; 
-    margin: 0 auto 20px auto; 
-    border-radius: 15px;
-    text-align: left;
-    margin-top: 13%;
+    background-color: #b3e5fc; /* Define cor de fundo azul claro */
+    padding: 18%; /* Define espaçamento interno */
+    width: 20%; /* Define a largura */
+    margin: 0 auto 20px auto; /* Centraliza e adiciona espaçamento inferior */
+    border-radius: 15px; /* Arredonda os cantos */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 13%; /* Define margem superior */
 }
 
+/* Estiliza o título dentro do formulário de cadastro */
 .containerCadastro h3 {
-    margin: 0 0 20px 0;
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
+    margin: 0 0 20px 0; /* Define espaçamentos */
+    font-size: 18px; /* Define tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold; /* Define o texto como negrito */
 }
 
+/* Estiliza os rótulos do formulário */
 .containerCadastro label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
+    display: block; /* Garante que cada rótulo ocupe uma linha inteira */
+    font-size: 14px; /* Define o tamanho da fonte */
+    margin-bottom: 5px; /* Adiciona espaçamento inferior */
 }
 
+/* Estiliza os campos de entrada do formulário */
 .containerCadastro input {
-    width: calc(100% - 20px);
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: calc(100% - 20px); /* Ajusta a largura para não ultrapassar o container */
+    padding: 8px; /* Adiciona espaçamento interno */
+    margin-bottom: 15px; /* Adiciona espaçamento inferior */
+    border: 1px solid #ccc; /* Define uma borda sutil */
+    border-radius: 5px; /* Arredonda os cantos */
 }
 
+/* Estiliza o botão de envio do formulário */
 .containerCadastro button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0288d1;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
+    width: 100%; /* Define largura total */
+    padding: 10px; /* Define espaçamento interno */
+    background-color: #0288d1; /* Define cor de fundo azul */
+    color: #fff; /* Define cor do texto */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Arredonda os cantos */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    font-size: 14px; /* Define o tamanho da fonte */
 }
 
+/* Altera a cor do botão quando o usuário passa o mouse */
 .containerCadastro button:hover {
-    background-color: #0277bd;
+    background-color: #0277bd; /* Torna o azul um pouco mais escuro */
 }

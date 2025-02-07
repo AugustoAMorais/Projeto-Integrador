@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    
+    <!-- Importa o arquivo de estilos CSS -->
     <link rel="stylesheet" href="../css/alarme.css">
+
+    <!-- Importa o script JavaScript de forma assíncrona -->
     <script src="../js/alarme.js" defer></script>
-    <title>Alarme</title>
+
+    <title>Alarme</title> <!-- Define o título da página -->
 </head>
 <body>
+    <!-- Cabeçalho da página -->
     <header>
         <nav>
+            <!-- Logo/título do sistema -->
             <div id="logo">
                 <h1>ALARME</h1>
             </div>
+
+            <!-- Botão para voltar ao menu -->
             <div id="back">
                 <a href="./menu.html" aria-label="Voltar para o menu">
                     <button aria-label="Botão de voltar">
@@ -22,27 +31,38 @@
             </div>
         </nav>
     </header>
-    <body>
+
+    <body> <!-- ⚠️ Erro: Não é necessário um segundo <body>, remova essa tag -->
     
+        <!-- Título da página -->
         <div class="title"><h2>Relógio com Despertador</h2></div>
     
-        
+        <!-- Relógio digital que exibe a hora atual -->
         <div class="clock" id="clock">00:00:00</div>
 
+        <!-- Container principal do formulário de alarme -->
         <div class="container">
 
             <div>
+                <!-- Campo para definir o horário do alarme -->
                 <label for="alarm" id="lblAlarm">Defina o horário do alarme:</label>
                 <input type="time" id="alarm">
-                <label for="remedy" id="lblRemedy">nome do medicamento:</label>
+
+                <!-- Campo para inserir o nome do medicamento -->
+                <label for="remedy" id="lblRemedy">Nome do medicamento:</label>
                 <input type="text" id="remedy">
+
+                <!-- Botão para definir o alarme -->
                 <button onclick="setAlarm()" id="setAlarm">Definir Alarme</button>
+
+                <!-- Botão para cancelar o alarme -->
                 <button onclick="cancelAlarm()" id="cancel">Cancelar Alarme</button>
             </div>
         
+            <!-- Lista onde os alarmes programados serão exibidos -->
             <div id="alarmlist" class="alarm-list"></div>
         
         </div>
         
     </body>
-    </html>
+</html>

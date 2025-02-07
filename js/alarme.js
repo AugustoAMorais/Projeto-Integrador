@@ -1,8 +1,8 @@
 // Variável que armazenará os alarmes ativos
 let alarmList = [];
-const alarmSound = new Audio("../mp3/iphone_alarm.mp3"); // Caminho correto do áudio
+const alarmSound = new Audio("../mp3/iphone_alarm.mp3"); // Caminho do áudio
 
-// Função que atualiza o relógio a cada segundo
+// Atualiza o relógio a cada segundo
 function updateClock() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
@@ -19,15 +19,17 @@ function updateClock() {
     });
 }
 
-// Função para tocar o alarme corretamente
+// Toca o alarme e exibe um alerta visual
 function playAlarm(remedio) {
     alarmSound.play().catch(error => {
         console.error("Erro ao reproduzir o áudio:", error);
         alert("⚠️ O navegador bloqueou o áudio. Clique na tela antes de definir o alarme.");
     });
 
-    // Criando um alerta visual
-    const message = document.getElementById('alarmList');
+    // Criando um alerta visual na tela
+    const message = document.getElementById('alarmlist');
+    if (!message) return;
+
     const alertDiv = document.createElement("div");
     alertDiv.classList.add("alarm-active");
     alertDiv.textContent = `⏰ ALERTA! Hora de tomar o medicamento: ${remedio}`;
@@ -40,41 +42,48 @@ function playAlarm(remedio) {
     }, 10000);
 }
 
-// Função para definir o alarme e salvar no banco de dados
+// Define o alarme e salva no banco de dados
 function setAlarm() {
     const alarmInput = document.getElementById("alarm").value;
     const inputRemedy = document.getElementById("remedy").value;
     const diasSemana = "1234567"; // Pode ser ajustado para dias específicos
     const somAlarme = "default.mp3"; // Som do alarme padrão
 
-    if (alarmInput && inputRemedy) {
-        fetch("http://localhost:3000/salvar-alarme", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`
-            },
-            body: JSON.stringify({
-                horario: alarmInput,
-                dias_semana: diasSemana,
-                nome_remedio: inputRemedy,
-                som_alarme: somAlarme
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                exibirAlarmes(); // Atualiza a lista de alarmes
-            } else {
-                alert("Erro ao salvar: " + data.message);
-            }
-        });
-    } else {
+    if (!alarmInput || !inputRemedy) {
         alert("Preencha todos os campos!");
+        return;
     }
+
+    // Verifica se o alarme já foi adicionado
+    if (alarmList.some(alarm => alarm.horario === alarmInput)) {
+        alert("⚠️ Alarme já definido para esse horário!");
+        return;
+    }
+
+    fetch("http://localhost:3000/salvar-alarme", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({
+            horario: alarmInput,
+            dias_semana: diasSemana,
+            nome_remedio: inputRemedy,
+            som_alarme: somAlarme
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            exibirAlarmes(); // Atualiza a lista de alarmes
+        } else {
+            alert("Erro ao salvar: " + data.message);
+        }
+    });
 }
 
-// Função para listar os alarmes salvos
+// Lista os alarmes salvos
 function exibirAlarmes() {
     fetch("http://localhost:3000/listar-alarmes", {
         method: "GET",
@@ -85,7 +94,7 @@ function exibirAlarmes() {
     .then(response => response.json())
     .then(alarmes => {
         alarmList = alarmes; // Atualiza a lista de alarmes ativos
-        const alarmListDiv = document.getElementById("alarmList");
+        const alarmListDiv = document.getElementById("alarmlist");
         alarmListDiv.innerHTML = ""; // Limpa a lista antes de atualizar
 
         alarmes.forEach(alarme => {
@@ -100,7 +109,7 @@ function exibirAlarmes() {
     });
 }
 
-// Função para remover um alarme
+// Remove um alarme
 function removerAlarme(id) {
     fetch(`http://localhost:3000/deletar-alarme/${id}`, {
         method: "DELETE",
@@ -118,20 +127,20 @@ function removerAlarme(id) {
     });
 }
 
-// Função para cancelar todos os alarmes
+// Cancela todos os alarmes
 function cancelAlarm() {
     alarmList = [];
-    document.getElementById("alarmList").innerHTML = "Nenhum alarme ativo.";
+    document.getElementById("alarmlist").innerHTML = "Nenhum alarme ativo.";
     alarmSound.pause();
     alarmSound.currentTime = 0;
 }
 
-// **Botão de teste do áudio**
+// **Botão de teste do áudio** - pode ser útil para debug
 /*document.addEventListener("DOMContentLoaded", () => {
     const testButton = document.createElement("button");
     testButton.textContent = "🔊 Testar Alarme";
     testButton.classList.add("test-button");
-    testButton.onclick = playAlarm;
+    testButton.onclick = () => playAlarm("Teste");
     document.body.appendChild(testButton);
 });*/
 

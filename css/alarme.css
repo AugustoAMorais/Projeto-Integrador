@@ -1,166 +1,182 @@
+/* Define estilos globais para todos os elementos da página */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho do elemento */
+    padding: 0; /* Remove qualquer padding padrão */
+    margin: 0; /* Remove qualquer margem padrão */
+    outline: none; /* Remove o contorno padrão dos elementos */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
 }
 
+/* Configurações gerais do corpo da página */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f8ff;
-    margin: 0;
-    padding: 20px;
+    display: flex; /* Ativa o modelo flexível para organização dos elementos */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    min-height: 100vh; /* Garante que a página ocupe pelo menos toda a altura da tela */
+    background-color: #f0f8ff; /* Define uma cor de fundo azul claro */
+    margin: 0; /* Remove margens */
+    padding: 20px; /* Adiciona um espaçamento interno */
 }
 
+/* Estilos da barra de navegação */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #87ceeb;
-    color: black;
-    padding: 30px 20px;
-    border-bottom-left-radius: 150%;
-    border-bottom-right-radius: 150%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    margin-left: -50%;
+    display: flex; /* Usa flexbox para alinhar os elementos */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: #87ceeb; /* Define a cor de fundo azul */
+    color: black; /* Define a cor do texto */
+    padding: 30px 20px; /* Define um espaçamento interno */
+    border-bottom-left-radius: 150%; /* Arredonda a borda inferior esquerda */
+    border-bottom-right-radius: 150%; /* Arredonda a borda inferior direita */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra na navegação */
+    width: 100%; /* Define a largura total */
+    position: fixed; /* Fixa a navegação no topo da tela */
+    top: 0; /* Posiciona a navegação no topo */
+    margin-left: -50%; /* Ajuste de posicionamento */
 }
 
+/* Estilos do logotipo dentro da navegação */
 #logo {
-    flex: 1;
-    margin-left: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:14px;
+    flex: 1; /* Ocupa o espaço disponível */
+    margin-left: 3%; /* Adiciona um espaçamento à esquerda */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    font-size: 14px; /* Define o tamanho da fonte */
 }
 
+/* Estiliza o texto do logotipo */
 #logo h1 {
-    font-size: 200%;
-    font-weight: bold;
-    margin: 0;
-    margin-right: 2%;
+    font-size: 200%; /* Define um tamanho grande para o texto */
+    font-weight: bold; /* Define o texto como negrito */
+    margin: 0; /* Remove margens */
+    margin-right: 2%; /* Adiciona um pequeno espaço à direita */
 }
 
+/* Estiliza o botão de voltar */
 #back {
-    position: absolute;
-    left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    position: absolute; /* Posiciona o botão de forma absoluta dentro da navegação */
+    left: 20px; /* Define um deslocamento para a esquerda */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Botão de voltar */
 #back button {
-    background-color: transparent;
-    border-radius: 50%;
-    width: 35px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    position: relative;
-    cursor: pointer;
+    background-color: transparent; /* Remove a cor de fundo */
+    border-radius: 50%; /* Torna o botão circular */
+    width: 35px; /* Define a largura */
+    height: 30px; /* Define a altura */
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    display: flex; /* Usa flexbox */
+    position: relative; /* Mantém o botão posicionado dentro do contêiner */
 }
 
+/* Ícone dentro do botão de voltar */
 #back img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+    width: 50%; /* Define a largura como metade do botão */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem não tenha espaçamentos extras */
+    margin: 0; /* Remove margens */
+    position: absolute; /* Posiciona o ícone no centro do botão */
+    top: 50%; /* Move para 50% da altura do botão */
+    left: 50%; /* Move para 50% da largura do botão */
+    transform: translate(-50%, -50%); /* Centraliza completamente */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
 }
 
+/* Botão dentro da navegação */
 nav button {
-    background-color: transparent;
-    display: flex;
-    cursor: pointer;
+    background-color: transparent; /* Remove a cor de fundo */
+    display: flex; /* Usa flexbox */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
 }
 
+/* Estiliza o contêiner principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #87ceeb;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 4%;
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #87ceeb; /* Define a cor de fundo azul */
+    width: 100%; /* Define a largura total */
+    max-width: 400px; /* Define uma largura máxima */
+    padding: 20px; /* Define um espaçamento interno */
+    border-radius: 15px; /* Arredonda os cantos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 4%; /* Adiciona margem no topo */
 }
 
+/* Estiliza o título dentro do contêiner */
 .title {
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 9%;
-    color: #000;
+    font-size: 0.9rem; /* Define um tamanho de fonte menor */
+    font-weight: bold; /* Define o texto como negrito */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 9%; /* Adiciona um espaçamento superior */
+    color: #000; /* Define a cor do texto */
 }
 
+/* Estiliza o relógio dentro do contêiner */
 .clock {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 4%;
+    font-size: 1.5rem; /* Define um tamanho maior para o relógio */
+    font-weight: bold; /* Define o texto como negrito */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 4%; /* Adiciona espaçamento superior */
 }
 
- .container div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 8px;
+/* Estiliza os elementos internos do contêiner */
+.container div {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%; /* Define a largura total */
+    margin-bottom: 8px; /* Adiciona espaçamento inferior */
 }
 
+/* Estiliza os rótulos dentro do contêiner */
 .container label {
-    font-weight: bold;
-    margin-bottom: 4px;
+    font-weight: bold; /* Define o texto como negrito */
+    margin-bottom: 4px; /* Adiciona espaçamento inferior */
 }
 
+/* Estiliza os campos de entrada dentro do contêiner */
 .container input {
-    width: 100%;
-    padding: 6px;
-    margin-bottom: 8px;
-    border: 1px solid #000;
-    border-radius: 5px;
+    width: 100%; /* Define a largura total */
+    padding: 6px; /* Adiciona espaçamento interno */
+    margin-bottom: 8px; /* Adiciona espaçamento inferior */
+    border: 1px solid #000; /* Define uma borda */
+    border-radius: 5px; /* Arredonda os cantos */
 }
 
+/* Estiliza os botões dentro do contêiner */
 .container button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    background-color: #4682B4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%; /* Define a largura total */
+    padding: 8px; /* Adiciona espaçamento interno */
+    margin-top: 4px; /* Adiciona espaçamento superior */
+    background-color: #4682B4; /* Define a cor de fundo azul */
+    color: white; /* Define a cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Arredonda os cantos */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
 }
 
+/* Efeito hover no botão */
 .container button:hover {
-    background-color: #4682B4;
+    background-color: #4682B4; /* Mantém a mesma cor no hover */
 }
 
+/* Estiliza a mensagem dentro do contêiner */
 .message {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-align:center;
-    white-space: pre-line;
+    margin-top: 8px; /* Adiciona espaçamento superior */
+    font-size: 0.9rem; /* Define um tamanho menor de fonte */
+    font-weight: bold; /* Define o texto como negrito */
+    text-align: center; /* Centraliza o texto */
+    white-space: pre-line; /* Mantém quebras de linha */
 }
 
 /* Ajustes para telas maiores */
@@ -172,25 +188,4 @@ nav button {
     .clock {
         font-size: 2rem;
     }
-    
-    .container {
-        max-width: 400px;
-        padding: 20px;
-    }
-
-    #logo h1 {
-        font-size: 200%;
-    }
-
-    #back {
-        margin-left: 3%; 
-        margin-top: -1%;
-    }
-
-    nav {
-        padding: 35px 20px;
-        border-bottom-left-radius: 50%; 
-        border-bottom-right-radius: 50%;
-    }
 }
-

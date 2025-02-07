@@ -1,207 +1,189 @@
 /* Estilo geral */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    line-height: 1.5;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    font-family: Arial, sans-serif; /* Define a fonte principal */
+    background-color: #f5f5f5; /* Define a cor de fundo */
+    line-height: 1.5; /* Define o espaçamento entre linhas */
+    min-height: 100vh; /* Garante altura mínima de 100% da tela */
+    display: flex; /* Usa flexbox para alinhar os elementos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    flex-direction: column; /* Organiza os elementos em coluna */
 }
 
+/* Estiliza o cabeçalho principal */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #87ceeb;
-    color: black;
-    padding: 30px 20px;
-    border-bottom-left-radius: 150%;
-    border-bottom-right-radius: 150%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    margin-left: -50%;
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: #87ceeb; /* Define cor de fundo azul claro */
+    color: black; /* Define cor do texto */
+    padding: 30px 20px; /* Adiciona espaçamento interno */
+    border-bottom-left-radius: 150%; /* Arredonda a borda inferior esquerda */
+    border-bottom-right-radius: 150%; /* Arredonda a borda inferior direita */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    width: 100%; /* Define largura total */
+    position: fixed; /* Fixa no topo da tela */
+    top: 0; /* Posiciona no topo */
+    margin-left: -50%; /* Ajuste de posicionamento */
 }
 
+/* Estiliza o logotipo */
 #logo {
-    flex: 1;
-    margin-left: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:14px;
+    flex: 1; /* Ocupa o espaço disponível */
+    margin-left: 3%; /* Define espaçamento à esquerda */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    font-size: 14px; /* Define tamanho da fonte */
 }
 
+/* Estiliza o título do logotipo */
 #logo h1 {
-    font-size: 200%;
-    font-weight: bold;
-    margin: 0;
+    font-size: 200%; /* Define um tamanho grande para o texto */
+    font-weight: bold; /* Define o texto como negrito */
+    margin: 0; /* Remove margens padrão */
 }
 
+/* Estiliza o botão de voltar */
 #back {
-    position: absolute;
-    left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    position: absolute; /* Posiciona de forma absoluta */
+    left: 20px; /* Define um deslocamento para a esquerda */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Estiliza o botão de voltar */
 #back button {
-    background-color: transparent;
-    border-radius: 50%;
-    width: 35px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    position: relative;
+    background-color: transparent; /* Remove a cor de fundo */
+    border-radius: 50%; /* Torna o botão circular */
+    width: 35px; /* Define a largura */
+    height: 30px; /* Define a altura */
+    justify-content: center; /* Centraliza conteúdo */
+    align-items: center; /* Centraliza conteúdo */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    display: flex; /* Usa flexbox */
+    position: relative; /* Mantém o botão posicionado dentro do contêiner */
 }
 
+/* Estiliza a imagem dentro do botão de voltar */
 #back img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 50%; /* Define a largura como metade do botão */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem não tenha espaçamentos extras */
+    margin: 0; /* Remove margens */
+    position: absolute; /* Posiciona o ícone no centro do botão */
+    top: 50%; /* Move para 50% da altura do botão */
+    left: 50%; /* Move para 50% da largura do botão */
+    transform: translate(-50%, -50%); /* Centraliza completamente */
 }
 
-/* Estilo para o nav (similar ao cabeçalho "DICAS") */
+/* Estiliza a barra de navegação */
 nav {
-    display: flex;
-    align-items: center;
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
     justify-content: center; /* Centraliza o conteúdo */
-    background-color: #87ceeb; 
-    color: black;
-    padding: 30px 20px;
-    border-bottom-left-radius: 150%;
-    border-bottom-right-radius: 150%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    box-sizing: border-box;
+    background-color: #87ceeb; /* Define cor de fundo azul claro */
+    color: black; /* Define cor do texto */
+    padding: 30px 20px; /* Define espaçamento interno */
+    border-bottom-left-radius: 150%; /* Arredonda a borda inferior esquerda */
+    border-bottom-right-radius: 150%; /* Arredonda a borda inferior direita */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    width: 100%; /* Define largura total */
+    box-sizing: border-box; /* Mantém dimensões corretas */
     position: relative; /* Permite posicionamento absoluto dos filhos */
 }
 
+/* Estiliza o título dentro da navegação */
 nav h1 {
-    font-size: 24px; /* Corrigindo o tamanho */
-    font-weight: bold;
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza no meio */
+    font-size: 24px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Define o texto como negrito */
+    margin: 0; /* Remove margens padrão */
+    position: absolute; /* Permite centralizar no meio */
+    left: 50%; /* Define posição central */
+    transform: translateX(-50%); /* Ajusta para alinhar corretamente */
 }
 
-#back {
-    position: absolute;
-    left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#back button {
-    background-color: transparent;
-    border-radius: 50%;
-    width: 35px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    position: relative;
-}
-
-#back img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Estilo da seção */
+/* Estiliza a seção principal */
 section {
-    width: 90%; /* Ajusta a largura inicial */
-    max-width: 800px; /* Define largura máxima para telas maiores */
-    padding: 20px;
-    border-radius: 8px;
+    width: 90%; /* Define uma largura inicial */
+    max-width: 800px; /* Define uma largura máxima */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Arredonda os cantos */
     text-align: center; /* Centraliza texto e imagens */
-    box-sizing: border-box;
-    margin: 20px 0; 
+    box-sizing: border-box; /* Mantém dimensões corretas */
+    margin: 20px 0; /* Adiciona espaçamento vertical */
 }
 
+/* Estiliza seções específicas */
 .receitas, .atividades {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Adiciona espaçamento entre as seções */
 }
 
+/* Estiliza os títulos secundários */
 h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 20px; /* Define tamanho da fonte */
+    margin-bottom: 10px; /* Adiciona espaçamento inferior */
 }
 
+/* Estiliza os parágrafos */
 p {
-    margin: 5px 0;
-    line-height: 1.5;
+    margin: 5px 0; /* Define espaçamentos verticais */
+    line-height: 1.5; /* Define espaçamento entre linhas */
 }
 
+/* Estiliza as imagens */
 img {
-    max-width: 80%;
-    height: auto;
-    margin-bottom: 10px;
+    max-width: 80%; /* Define largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Adiciona espaçamento inferior */
 }
 
-/* Estilo do menu de navegação */
+/* Estiliza o menu de navegação */
 #menu {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza os itens */
+    padding: 10px; /* Define espaçamento interno */
+    border-bottom: 2px solid #ccc; /* Adiciona uma borda inferior */
+    margin-bottom: 20px; /* Adiciona espaçamento inferior */
 }
 
+/* Estiliza os links dentro do menu */
 #menu a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    margin: 0 10px; /* Define espaçamento entre os itens */
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: black; /* Define cor do texto */
+    font-weight: bold; /* Define o texto como negrito */
+    padding: 5px 10px; /* Define espaçamento interno */
+    border-radius: 5px; /* Arredonda os cantos */
+    transition: background-color 0.3s; /* Adiciona efeito de transição */
 }
 
+/* Estiliza o efeito hover dos links */
 #menu a:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
 }
 
+/* Estiliza a responsividade para telas menores */
 @media screen and (max-width: 768px) {
     .body {
-        width: 100%;
-        flex-direction: column;
+        width: 100%; /* Garante que ocupe toda a largura */
+        flex-direction: column; /* Organiza os elementos em coluna */
     }
 
     #logo h1 {
-        font-size: 200%;
+        font-size: 200%; /* Mantém o tamanho do logo */
     }
 
     #back {
-        margin-left: 3%; 
+        margin-left: 3%; /* Ajusta o posicionamento do botão de voltar */
         margin-top: -1%;
     }
 
     nav {
-        padding: 15px 10px;
+        padding: 15px 10px; /* Ajusta o espaçamento da navegação */
         border-bottom-left-radius: 50%; 
         border-bottom-right-radius: 50%;
     }
